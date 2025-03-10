@@ -6,7 +6,7 @@
   };
 
   outputs =
-    { zig2nix, ... }:
+    { self, zig2nix, ... }:
     let
       flake-utils = zig2nix.inputs.flake-utils;
     in
@@ -30,5 +30,10 @@
           ];
         };
       }
-    ));
+    ))
+    // {
+      overlays.default = final: prev: {
+        asus-wmi-screenpad-ctl = self.packages.${prev.system};
+      };
+    };
 }

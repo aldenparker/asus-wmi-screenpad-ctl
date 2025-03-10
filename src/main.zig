@@ -10,6 +10,7 @@ pub fn printHelp() void {
         \\  [-s, --set] [UINT] = Set the brightness level (constrained to max level)
         \\  [-a, --add] [INT]  = Add to brightness level (constrained to max level, negative integer for decrease)
         \\  [-m, --max] [UINT] = Set max level (Just because max is set high, does not mean your display can handle it)
+        \\
     , .{});
 }
 

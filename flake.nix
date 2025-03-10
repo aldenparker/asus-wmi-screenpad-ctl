@@ -17,17 +17,19 @@
         pkgs = env.pkgs;
       in
       {
-        packages.default = env.package rec {
-          pname = "asus-wmi-screenpad-ctl";
-          version = "1.0.0";
+        packages = {
+          asus-wmi-screenpad-ctl = env.package rec {
+            pname = "asus-wmi-screenpad-ctl";
+            version = "1.0.0";
 
-          src = ./.;
+            src = ./.;
 
-          zigBuildZonLock = ./build.zig.zon2json-lock;
+            zigBuildZonLock = ./build.zig.zon2json-lock;
 
-          zigBuildFlags = [
-            "-Doptimize=ReleaseFast"
-          ];
+            zigBuildFlags = [
+              "-Doptimize=ReleaseFast"
+            ];
+          };
         };
       }
     ))

@@ -17,25 +17,23 @@
         pkgs = env.pkgs;
       in
       {
-        packages = {
-          asus-wmi-screenpad-ctl = env.package rec {
-            pname = "asus-wmi-screenpad-ctl";
-            version = "1.0.0";
+        packages.default = env.package rec {
+          pname = "asus-wmi-screenpad-ctl";
+          version = "1.0.0";
 
-            src = ./.;
+          src = ./.;
 
-            zigBuildZonLock = ./build.zig.zon2json-lock;
+          zigBuildZonLock = ./build.zig.zon2json-lock;
 
-            zigBuildFlags = [
-              "-Doptimize=ReleaseFast"
-            ];
-          };
+          zigBuildFlags = [
+            "-Doptimize=ReleaseFast"
+          ];
         };
       }
     ))
     // {
       overlays.default = final: prev: {
-        asus-wmi-screenpad-ctl = self.packages.${prev.system};
+        asus-wmi-screenpad-ctl = self.packages.${prev.system}.default;
       };
     };
 }

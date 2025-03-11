@@ -1,6 +1,6 @@
 # asus-wmi-screenpad-ctl
 
-This is a small application that is meant to be used with the [asus-wmi-screenpad kernal module](https://github.com/Plippo/asus-wmi-screenpad). This program allows for simple and safe adjustment of the brightness for the Asus Screenpad. It will probobly only be useful for those that do not use standard desktop enviornements like KDE.
+This is a small application that is meant to be used with the [asus-wmi-screenpad kernal module](https://github.com/Plippo/asus-wmi-screenpad). This program allows for simple and safe adjustment of the brightness for the Asus Screenpad. It will probably only be useful for those that do not use standard desktop enviornements like KDE.
 
 ## Install
 

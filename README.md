@@ -20,18 +20,34 @@ environment.systemPackages = with pkgs; [
 
 ### Manual
 ```
-zig build
-sudo cp ./zig-out/bin/asus-wmi-screenpad-ctl /bin/
+cargo build -r
+sudo cp ./target/release/asus-wmi-screenpad-ctl /bin/
 ```
 Or copy wherever else the path points to.
 
 ## Usage
 
 ```
-asus-wmi-screenpad-ctl [FLAG] [DATA]
+Small application to control the asus-wmi-screenpad brightness
 
-Flags:
-  [-s, --set] [UINT] = Set the brightness level (constrained to max level)
-  [-a, --add] [INT]  = Add to brightness level (constrained to max level, negative integer for decrease)
-  [-m, --max] [UINT] = Set max level (Just because max is set high, does not mean your display can handle it)
+Usage: asus-wmi-screenpad-ctl <MODE> <DATA>
+
+Arguments:
+  <MODE>
+          The mode to run the command in
+
+          Possible values:
+          - set: Set the brightness value
+          - add: Add to the brightness value (negative value for decrease)
+          - max: Set the max brightness to allow (defaults to 100, just because you can set it higher does not mean your screen can handle it)
+
+  <DATA>
+          The value used to modify the brightness value
+
+Options:
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version
 ```

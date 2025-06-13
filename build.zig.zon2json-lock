@@ -1,8 +1,0 @@
-{
-  "known_folders-0.0.0-Fy-PJtLDAADGDOwYwMkVydMSTp_aN-nfjCZw6qPQ2ECL": {
-    "name": "known_folders",
-    "url": "git+https://github.com/ziglibs/known-folders.git#aa24df42183ad415d10bc0a33e6238c437fc0f59",
-    "hash": "sha256-YiJ2lfG1xsGFMO6flk/BMhCqJ3kB3MnOX5fnfDEcmMY=",
-    "rev": "aa24df42183ad415d10bc0a33e6238c437fc0f59"
-  }
-}

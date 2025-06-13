@@ -1,0 +1,9 @@
+[package]
+name = "asus-wmi-screenpad-ctl"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.40", features = ["derive"] }
+confy = "1.0.0"
+serde = { version = "1.0.219", features = ["derive"] }

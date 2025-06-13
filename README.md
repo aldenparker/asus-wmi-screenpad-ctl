@@ -6,12 +6,15 @@ This is a small application that is meant to be used with the [asus-wmi-screenpa
 
 ### NixOS
 ```
+# In Flake.nix
 inputs.asus-wmi-screenpad-ctl.url = "github:aldenparker/asus-wmi-screenpad-ctl"
 
-... # Add Overlay for nix packages (asus-wmi-screenpad-ctl.overlays.default)
-
+.............................................
+# In nix config
 environment.systemPackages = with pkgs; [
-  asus-wmi-screenpad-ctl
+  environment.systemPackages = [
+    inputs.asus-wmi-screenpad-ctl.packages."${system}".default
+  ];
 ];
 ```
 

@@ -8,8 +8,9 @@ This is a small application that is meant to be used with the [asus-wmi-screenpa
 ```
 # In Flake.nix
 inputs.asus-wmi-screenpad-ctl.url = "github:aldenparker/asus-wmi-screenpad-ctl"
+```
 
-.............................................
+```
 # In nix config
 environment.systemPackages = with pkgs; [
   environment.systemPackages = [

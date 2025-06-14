@@ -5,8 +5,9 @@ This is a small application that is meant to be used with the [asus-wmi-screenpa
 ## Install
 
 ### NixOS
-asus-wmi-screenpad-ctl is in the nixpkgs repository if you want to install normally. 
-If you use flakes however, I encourage you to use the built in flake for this package so you are always up to date.
+`asus-wmi-screenpad-ctl` is in the `nixpkgs` repository if you want to install normally. 
+
+If you use flakes however, I encourage you to use the flake for this package so you are always up to date.
 
 ```
 # In Flake.nix
